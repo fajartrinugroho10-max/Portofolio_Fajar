@@ -1,0 +1,56 @@
+========================================================================
+             PANDUAN GAMPANG GANTI FOTO PORTOFOLIO
+========================================================================
+
+Kamu punya 2 CARA SUPER GAMPANG untuk mengganti foto:
+
+------------------------------------------------------------------------
+CARA 1: TINGGAL TIMPA FILE DI FOLDER INI (public/foto/)
+------------------------------------------------------------------------
+Cukup masukkan foto kamu ke folder ini dengan nama file di bawah.
+Sekarang sudah support otomatis format: .jpg, .png, .jpeg, atau .webp!
+(Contoh: kamu bisa pakai profil.png atau profil.jpg, langsung muncul!)
+
+DAFTAR NAMA FOTO BERDASARKAN HALAMAN:
+
+1. BERANDA (Halaman Utama):
+   - profil.jpg          -> Foto profil kamu di bagian atas (Hero)
+   - tentang.jpg         -> Foto kegiatan kamu di bagian "Tentang Saya"
+   - tahap-1.jpg s/d tahap-6.jpg -> Foto tahapan RPL (SDLC)
+   - jejak-1.jpg s/d jejak-5.jpg -> Foto jejak masa kecil s/d SMK
+   - menu-akademik.jpg   -> Foto kartu menu Akademik
+   - menu-organisasi.jpg -> Foto kartu menu Organisasi
+   - menu-hobi.jpg       -> Foto kartu menu Hobi
+
+2. HALAMAN AKADEMIK:
+   - kegiatan-1.jpg s/d kegiatan-4.jpg -> Foto 4 kegiatan akademik
+   - projek-analisis-kebutuhan.jpg     -> Foto cover projek Analisis
+   - projek-desain-ui.jpg              -> Foto cover projek Desain UI
+   - projek-web-toko.jpg               -> Foto cover projek Web Toko
+   - projek-erd-database.jpg           -> Foto cover projek ERD Database
+
+3. HALAMAN ORGANISASI:
+   - org-osis-1.jpg, org-osis-2.jpg, org-osis-3.jpg       -> Foto OSIS
+   - org-musik-1.jpg, org-musik-2.jpg, org-musik-3.jpg    -> Foto Ekskul Musik
+   - org-pramuka-1.jpg, org-pramuka-2.jpg, org-pramuka-3.jpg -> Foto Pramuka
+   - org-pkl-1.jpg, org-pkl-2.jpg, org-pkl-3.jpg          -> Foto PKL/Magang
+
+4. HALAMAN HOBI:
+   - hobi-musik-1.jpg, hobi-musik-2.jpg, hobi-musik-3.jpg       -> Foto Hobi Musik
+   - hobi-olahraga-1.jpg, hobi-olahraga-2.jpg, hobi-olahraga-3.jpg -> Foto Olahraga
+   - hobi-seni-1.jpg, hobi-seni-2.jpg, hobi-seni-3.jpg          -> Foto Seni
+   - hobi-sejarah-1.jpg, hobi-sejarah-2.jpg, hobi-sejarah-3.jpg -> Foto Sejarah
+
+------------------------------------------------------------------------
+CARA 2: ATUR LANGSUNG DI FILE app/utils/data.ts (BISA LINK INTERNET)
+------------------------------------------------------------------------
+Buka file:
+- app/utils/data.ts (untuk Beranda, Akademik, dan Hobi)
+- app/utils/organisasi.ts (untuk Organisasi)
+
+Di situ sudah disediakan properti `foto` untuk setiap item.
+Kamu bisa ganti dengan nama file bebas, contoh:
+  foto: '/foto/fajar-ganteng.png'
+atau bahkan link foto langsung dari internet:
+  foto: 'https://images.unsplash.com/photo-...'
+========================================================================

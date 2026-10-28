@@ -1,0 +1,1 @@
+Taruh file projek (PDF/ZIP) di folder ini, lalu samakan namanya di app/utils/data.ts

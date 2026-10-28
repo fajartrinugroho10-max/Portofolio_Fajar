@@ -1,0 +1,1 @@
+intro.mp4 di sini hanya VIDEO CONTOH (animasi 8 detik). Ganti dengan videomu, namanya tetap intro.mp4 (MP4 H.264, maks 20 MB). Kalau mau tanpa video, hapus file intro.mp4.

@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --ink: #0e1a2b;
+  --mute: #52627a;
+  --line: #d5deea;
+  --brand: #2456e8;
+  --brand-ink: #ffffff;
+  --editor: #0e1a2b;
+}
+.dark {
+  --bg: #0b1220;
+  --surface: #121c30;
+  --ink: #e8eef8;
+  --mute: #9aabc4;
+  --line: #223250;
+  --brand: #6f93ff;
+  --brand-ink: #0b1220;
+  --editor: #070d19;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-mute: var(--mute);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-editor: var(--editor);
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-display);
+  line-height: 1.65;
+}
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
+
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: .55ch; height: 1.1em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: #7aa2ff;
+  animation: blink 1s steps(2) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+@keyframes vibrate {
+  0%, 100% { transform: scaleY(1); }
+  20% { transform: scaleY(5); } 40% { transform: scaleY(-4); }
+  60% { transform: scaleY(3); } 80% { transform: scaleY(-2); }
+}
+.vibrate { animation: vibrate .5s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .caret::after, .vibrate { animation: none; }
+}
+
+/* ===== tambahan v2 ===== */
+@keyframes blob { to { transform: translate(40px, -30px) scale(1.2); } }
+.blob { animation: blob 12s ease-in-out infinite alternate; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.marquee { animation: marquee 28s linear infinite; }
+@keyframes floaty { 50% { transform: translateY(-10px); } }
+.floaty { animation: floaty 4s ease-in-out infinite; }
+@keyframes vibx {
+  0%, 100% { transform: scaleX(1); } 20% { transform: scaleX(3.5); }
+  40% { transform: scaleX(-2.5); } 60% { transform: scaleX(2); } 80% { transform: scaleX(-1); }
+}
+.vibx { animation: vibx .7s ease-out; transform-box: fill-box; transform-origin: center; }
+@keyframes putar { to { transform: rotate(360deg); } }
+.putar { animation: putar 8s linear infinite; transform-box: fill-box; transform-origin: center; }
+@media (prefers-reduced-motion: reduce) { .blob, .marquee, .floaty, .vibx, .putar { animation: none; } }
